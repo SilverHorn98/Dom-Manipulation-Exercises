@@ -44,15 +44,13 @@
         const btn = document.createElement("button");
 
         item.appendChild(span);
-        item.appendChild(btn);
-
         span.textContent = text_value;
+        item.appendChild(btn);
         btn.textContent = "Delete";
-
         list.appendChild(item);
 
         btn.addEventListener('click', () => {
-          item.remove()
+          list.removeChild(item);
         });
 
         input_field.focus();
